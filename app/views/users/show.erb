@@ -1,0 +1,40 @@
+<h2>ユーザー情報</h2>
+
+
+<div class="">
+	<p>Username</p>
+</div>
+
+<div class="form-box">
+	<% if @user.present? %>
+	<div class="form-box">
+	<p> <%= @user.name %></p>
+	</div>
+	<% else %>
+	<div class="form-box">
+	<p>ユーザーが見つかりません。</p>
+	</div>
+	<% end %>
+</div>
+
+<div>
+	<p>Email</p>
+</div>
+
+<div class="form-box">
+	<% if @user.present? %>
+	<div class="form-box">
+	<p><%= @user.email %></p>
+	</div>
+	<% else %>
+	<div class="form-box">
+	<p>ユーザーが見つかりません。</p>
+	</div>
+	<% end %>
+
+
+</div>
+
+<div class="btn">
+	<%= link_to "編集" , edit_users_path, method: :get %>
+</div>

@@ -1,0 +1,17 @@
+<!-- 編集フォーム -->
+<%= form_with model: memo, local: true, method: :patch do |f| %>
+	<div class="memo-header">
+		<%= f.text_field :title, placeholder: 'title' , class: "form_box" %>
+	</div>
+	<div class="memo-center">
+		<%= f.text_area :description, placeholder: 'memo' , class: "form_box" %>
+	</div>
+	<div class="memo-footer">
+		<%= f.submit "update" , class: "btn" %>
+	</div>
+	<% end %>
+		<!-- 削除ボタン -->
+		<div class="memo-footer">
+			<%= button_to "delete" , memo_path(memo.id), method: :delete, class: "btn" , data: {
+				confirm: 'Are you sure you want to delete this memo?' } %>
+		</div>

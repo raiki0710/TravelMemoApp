@@ -1,0 +1,34 @@
+<div class="col-box-1">
+	<%= form_with url: search_path, local: true, method: :get do |f| %>
+		<div class="search-container">
+			<div class="search-box">
+				<%= f.text_field :word, placeholder: "メモを検索する" , class: "form_box" %>
+					<button type="submit"><i class="fas fa-search"></i></button>
+			</div>
+		</div>
+		<% end %>
+</div>
+
+
+
+
+
+<ul>
+	<% @memos.each do |memo| %>
+		<li>
+			<div class="col-box-2">
+				<%= form_with model: memo, local: true, method: :patch do |f| %>
+					<div class="memo-header">
+						<%= f.text_field :title, placeholder: 'title' , class: "form_box" %>
+					</div>
+					<div class="memo-center">
+						<%= f.text_area :description, placeholder: 'memo' , class: "form_box" %>
+					</div>
+					<div class="memo-footer">
+						<%= f.submit "update" , class: "btn" %>
+					</div>
+					<% end %>
+			</div>
+		</li>
+		<% end %>
+</ul>

@@ -1,0 +1,495 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #696969;
+	font-family: sans-serif;
+	list-style-position: inside;
+}
+
+p {
+	color: #ffffff;
+	/* font-size: 20px; */
+}
+
+
+/* top page css */
+.mv-image {
+	background-image: url('pictures/DSCF6084.JPG');
+	background-position: center;
+	background-size: cover;
+	height: 600px;
+}
+
+.mv-image-transparent {
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 100%;
+	height: 100%;
+}
+
+.blue-color {
+	background-color: blue;
+}
+
+.green-color {
+	background-color: green;
+}
+
+.red-color {
+	background-color: red;
+}
+
+.notice-text {
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 0;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #12489eac;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-bottom: 3px solid #3498db;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	transition: color 0.3s ease, border-color 0.3s ease;/
+}
+
+h2:hover {
+	color: #3498db;
+	border-color: #2980b9;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+.wrapper {
+	width: 100%;
+
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+}
+
+
+.col-box-1,
+.col-box-2,
+.col-box-3,
+.col-box-4 {
+	padding: 6px;
+	box-sizing: border-box;
+}
+
+.col-box-1 {
+	width: 81%;
+	margin: 0 auto;
+}
+
+.col-box-2 {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col-box-3 {
+	width: 33.3%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col-box-4 {
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* レスポンシブ対応: スクリーンサイズが768px以下の場合は、各列を100%に */
+@media (max-width: 768px) {
+
+	.col-box-1,
+	.col-box-2,
+	.col-box-3,
+	.col-box-4 {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.flex-start {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+/* メモ編集フォーム */
+.memo-header {
+	width: 100%;
+	padding: 20px;
+	min-height: 120px;
+	background: linear-gradient(135deg, #1abc9c, #16a085);
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.memo-header:hover {
+	background: linear-gradient(135deg, #16a085, #1abc9c);
+	transform: translateY(-2px);
+}
+
+.memo-center {
+	width: 100%;
+	padding: 20px;
+	min-height: 120px;
+	background-color: #fff8e1;
+	border-radius: 0 0 8px 8px;
+	border: 1px solid #f4d03f;
+	color: #333;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.memo-center:focus-within {
+	background-color: #fff3c1;
+}
+
+.memo-footer {
+	width: 100%;
+	padding: 12px;
+	background-color: #1abc9c;
+	border-radius: 0 0 8px 8px;
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.memo-footer:hover {
+	background-color: #16a085;
+}
+
+.memo-footer a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+.memo-footer a:hover {
+	text-decoration: underline;
+}
+
+.memo-other {
+	width: 100%;
+	padding: 12px;
+	text-align: right;
+	color: #888;
+	font-size: 0.9rem;
+	font-style: italic;
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7;
+}
+
+/* メモ作成フォーム */
+.memo-create-header {
+	width: 100%;
+	padding: 20px;
+	min-height: 120px;
+	background: linear-gradient(135deg, #1a58bc, #163da0);
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.memo-create-header:hover {
+	background: linear-gradient(135deg, #163da0, #1a58bc);
+	transform: translateY(-2px);
+}
+
+.memo-create-center {
+	width: 100%;
+	padding: 20px;
+	min-height: 120px;
+	background-color: #fff8e1;
+	border-radius: 0 0 8px 8px;
+	border: 1px solid #f4d03f;
+	color: #333;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.memo-create-center:focus-within {
+	background-color: #fff3c1;
+}
+
+.memo-create-footer {
+	width: 100%;
+	padding: 12px;
+	background-color: #163da0;
+	border-radius: 0 0 8px 8px;
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.memo-create-footer:hover {
+	background-color: #1a58bc;
+}
+
+.memo-create-footer a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+.memo-create-footer a:hover {
+	text-decoration: underline;
+}
+
+.memo-create-other {
+	width: 100%;
+	padding: 12px;
+	text-align: right;
+	color: #888;
+	font-size: 0.9rem;
+	font-style: italic;
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7;
+}
+
+
+.form-box {
+	width: 100%;
+	padding: 12px 15px;
+	font-size: 1rem;
+	color: #333;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+
+.form-box:focus {
+	outline: none;
+	border-color: #3498db;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-box::placeholder {
+	color: #aaa;
+	font-style: italic;
+}
+
+textarea {
+	min-height: 80px;
+}
+
+.btn {
+	border: 1px solid #d3d3d3;
+	border-radius: 6px;
+	padding: 3px 12px;
+}
+
+.btn-100 {
+	border: 1px solid #d3d3d3;
+	border-radius: 6px;
+	padding: 10px 10px;
+	color: #ffffff;
+	width: 100%;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
+}
+
+.field_with_errors {
+	display: contents;
+
+}
+
+/* SEARCHの(・)対策 */
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+/* 検索欄 */
+.search-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0;
+}
+
+.search-box {
+	display: flex;
+	align-items: center;
+	background-color: #f7f7f7;
+	border-radius: 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 10px 20px;
+	transition: all 0.3s ease;
+	width: 100%;
+	max-width: 400px;
+}
+
+.search-box input[type="text"] {
+	border: none;
+	outline: none;
+	background: transparent;
+	font-size: 16px;
+	width: 100%;
+	padding: 8px;
+	color: #333;
+}
+
+.search-box button {
+	background-color: #3498db;
+	border: none;
+	border-radius: 50%;
+	padding: 12px;
+	cursor: pointer;
+	margin-left: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+	background-color: #2980b9;
+}
+
+.search-box input[type="text"]:focus {
+	border-bottom: 2px solid #3498db;
+}
+
+/* ヘッダー全体 */
+.header {
+	background-image: url('pictures/DSCF4775.JPG');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 80px 0;
+	/* position: sticky; */
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ロゴ部分 */
+.header .logo {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: 20px;
+	margin-top: 70px;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+
+/* ナビゲーション部分 */
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin-top: 0;
+	padding: 0;
+}
+
+.navbar li {
+	margin: 0 20px;
+}
+
+.navbar a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	border-radius: 30px;
+	transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+	color: #ff0;
+	/* ホバー時の文字色 */
+}
+
+/* .navbar a:hover {
+	background-color: #2980b9;
+} */
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar li {
+		margin: 10px 0;
+	}
+}
+
+.navbar a i {
+	margin-right: 8px;
+}
+
+.login {
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	list-style: none;
+	margin-right: 20px;
+	padding: 0;
+}
+
+.login a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	border-radius: 30px;
+	transition: background-color 0.3s ease;
+}
+
+.login li a:hover {
+	color: #ff0;
+	/* ホバー時の文字色 */
+}
+
+.login-font-color {
+	color: #ffffff;
+}

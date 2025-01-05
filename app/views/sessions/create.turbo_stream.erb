@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <turbo-stream action="replace" target="flash">
+    <template>
+      <div id="flash" class="notice"><%= flash[:notice] %></div>
+    </template>
+  </turbo-stream>
+<% elsif flash[:alert] %>
+  <turbo-stream action="replace" target="flash">
+    <template>
+      <div id="flash" class="alert"><%= flash[:alert] %></div>
+    </template>
+  </turbo-stream>
+<% end %>

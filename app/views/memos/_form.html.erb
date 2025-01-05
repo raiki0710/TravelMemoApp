@@ -1,0 +1,12 @@
+<!-- 新規作成フォーム -->
+<%= form_with model: memo_new, local: true, method: :post do |f| %>
+	<div class="memo-create-header">
+		<%= f.text_field :title, placeholder: 'タイトル' , class: "form-box" %>
+	</div>
+	<div class="memo-create-center">
+		<%= f.text_area :description, placeholder: 'メモ内容' , class: "form-box" %>
+	</div>
+	<div class="memo-create-footer">
+		<%= f.submit "create" , class: "btn" %>
+	</div>
+	<% end %>

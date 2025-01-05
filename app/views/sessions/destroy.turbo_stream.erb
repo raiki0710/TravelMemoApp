@@ -1,0 +1,10 @@
+<turbo-stream action="replace" target="flash">
+  <template>
+    <div id="flash" class="notice"><%= flash[:notice] %></div>
+  </template>
+</turbo-stream>
+
+<%= turbo_stream.replace "flash", partial: "layouts/flash", locals: { flash: flash } %>
+<%= turbo_stream.replace "login" do %>
+  <p>ログアウトしました。</p>
+<% end %>

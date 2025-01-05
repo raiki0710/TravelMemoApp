@@ -1,0 +1,32 @@
+<div class="wrapper">
+	<!-- <div class="container flex-start">
+		<div class="col-box-1">
+			<%= form_with url: search_path, local: true, method: :get do |f| %>
+				<div class="search-container">
+					<div class="search-box">
+						<%= f.text_field :word, placeholder: "メモを検索する" , class: "form_box" %>
+							<button type="submit"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<% end %>
+		</div> -->
+
+
+	<!-- タイトル -->
+	<div class="col-box-1">
+		<h2>Memo一覧</h2>
+	</div>
+
+
+
+	<div class="wrapper" id="login flash">
+		<div class="container">
+
+
+
+			<div class="container flex-start" id="memo_list">
+				<%= render "memos/list" , memos: @current_user.memos %>
+			</div>
+		</div>
+	</div>
+</div>

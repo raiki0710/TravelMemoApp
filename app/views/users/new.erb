@@ -1,0 +1,19 @@
+<h2>ユーザー新規登録</h2>
+
+
+<%= form_with model: @user_new,　url: users_path, local: true, method: :post do |f| %>
+
+	<%= f.label :name, "Username" %>
+		<%= f.text_field :name, class: "form-box" %>
+
+			<%= f.label :email, "Email" %>
+				<%= f.email_field :email, class: "form-box" %>
+
+					<%= f.label :password, "Password" %>
+						<%= f.password_field :password, class: "form-box" %>
+
+
+							<%= f.submit "新規登録" , class: "btn" %>
+
+
+								<% end %>
